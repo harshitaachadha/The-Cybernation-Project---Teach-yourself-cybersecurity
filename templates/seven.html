@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/top10.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owasp-homepage.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body class="p-3 mb-2 hello">
+<!-- ******************************NAVBAR***************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="resize" src="{% static 'css/logo.png' %}" alt=""></a>
+            <ul class="navbar navbar-nav navbar-brand">
+              <li> <h1> <span style="padding: 6px; border: 4px dotted #2EC4B6; background-color:#FFBF69">  CYBERNATION  </h1></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'owasp_homepage' %}"><strong>OWASP</strong></a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>The Top 10 Vulnerabilities</strong>
+              </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{% url 'one' %}">SQL Injection</a></li>
+      <li><a class="dropdown-item" href="{% url 'two' %}">Broken Authentication Vulnerability</a></li>
+      <li><a class="dropdown-item" href="{% url 'three' %}">Sensitive Data Exposure</a></li>
+      <li><a class="dropdown-item" href="{% url 'four' %}">XML External Entities (XXE)</a></li>
+      <li><a class="dropdown-item" href="{% url 'five' %}">Broken Access Control</a></li>
+      <li><a class="dropdown-item" href="{% url 'six' %}">Security Misconfigurations</a></li>
+      <li><a class="dropdown-item" href="{% url 'seven' %}">Cross-Site Scripting (XSS)</a></li>
+      <li><a class="dropdown-item" href="{% url 'eight' %}">Insecure Deserialization</a></li>
+      <li><a class="dropdown-item" href="{% url 'nine' %}">Using Components with Known Vulnerabilities</a></li>
+      <li><a class="dropdown-item" href="{% url 'ten' %}">Insufficient Logging and Monitoring</a></li>
+<!-- add the name sof the vulnerabilities to the drop down menu-->
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'netizens' %}"><strong>For Netizens</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- ******************************NAVBAR***************************************************-->
+<!-- makes sure that the jumbotron does not get hidden behind fixed navbar-->
+
+<!-- ******************************CODING THAT IS PAGE SPECIFIC STARTS HERE************************** -->
+<br><br><br><br><br>
+<h1> #7 Cross-Site Scripting (XSS)
+ </h1>
+<div class="jumbotron white">
+    <p> Cross Site Scripting (XSS) is a widespread vulnerability that affects many web applications. XSS attacks consist of injecting malicious client-side scripts into a website and using the website as a propagation method. It can also be defined as a code injection attack that is executed on client side of the web application which in most of the cases is the victim’s web browser.
+ In XXS vulnerability, the attacker injects malicious code into the browser to make the application do something it wasn’t originally intended to do. Exploiting this vulnerability, the hacker may steal cookies, session tokens and other sensitive information. This type of vulnerability may also be used to modify the original contents of the website therefore it is as harmful to the user of the application as it is to the affiliated organisation itself.
+</p>
+</div>
+<div class="jumbotron lightblue">
+  <p>In cross-site scripting attacks, the hacker tampers with the web application and steals credentials from the browsers or sometimes even via the servers. There can mainly be three types of XXS attacks.
+The first one is the Reflected cross site scripting attack. In this case, the malicious script is executed on the victim side and is not stored on the server. The second type of XXS attack is termed as the Stored XXS and in this case, the malicious script is stored and executed on the server. This script is executed every time the site is requested by the client/victim. The final type of XXS attack is the DOM or Document object model attack. This type of attack is a client side attack and the script is not stored on the server. In this case, the legitimate script as requested by the server is executed first followed by the malicious one.
+</p>
+</div>
+<div class="jumbotron aqua">
+
+  <p>Cross site scripting can be prevented if the following suggestions are incorporated into a given web application:
+
+Escaping the user input and thereby taking away the special features of certain characters. This prevents injection of html tags and other symbols utilized to create malicious scripts that may be fed into the application.
+All the inputs should be treated as threats and the data entered should always be validated and sanitisation of inputs should be done religiously. This allows the elimination of script tags and usage of regular expressions.
+The output should always be encoded. The use of right response headers may also be done to closely govern the kind of data that is expected and displayed by the application.
+The use of content security policy may also be done.
+
+</p>
+
+</div>
+
+<br>
+<div class="footer">
+  <p> Created By Harshita Chadha @2021</p>
+</div>
+  </body>
+</html>

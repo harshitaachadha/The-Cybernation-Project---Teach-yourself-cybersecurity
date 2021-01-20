@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/top10.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owasp-homepage.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body class="p-3 mb-2 hello">
+<!-- ******************************NAVBAR***************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="resize" src="{% static 'css/logo.png' %}" alt=""></a>
+            <ul class="navbar navbar-nav navbar-brand">
+              <li> <h1> <span style="padding: 6px; border: 4px dotted #2EC4B6; background-color:#FFBF69">  CYBERNATION  </h1></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'owasp_homepage' %}"><strong>OWASP</strong></a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>The Top 10 Vulnerabilities</strong>
+              </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{% url 'one' %}">SQL Injection</a></li>
+      <li><a class="dropdown-item" href="{% url 'two' %}">Broken Authentication Vulnerability</a></li>
+      <li><a class="dropdown-item" href="{% url 'three' %}">Sensitive Data Exposure</a></li>
+      <li><a class="dropdown-item" href="{% url 'four' %}">XML External Entities (XXE)</a></li>
+      <li><a class="dropdown-item" href="{% url 'five' %}">Broken Access Control</a></li>
+      <li><a class="dropdown-item" href="{% url 'six' %}">Security Misconfigurations</a></li>
+      <li><a class="dropdown-item" href="{% url 'seven' %}">Cross-Site Scripting (XSS)</a></li>
+      <li><a class="dropdown-item" href="{% url 'eight' %}">Insecure Deserialization</a></li>
+      <li><a class="dropdown-item" href="{% url 'nine' %}">Using Components with Known Vulnerabilities</a></li>
+      <li><a class="dropdown-item" href="{% url 'ten' %}">Insufficient Logging and Monitoring</a></li>
+<!-- add the name sof the vulnerabilities to the drop down menu-->
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'netizens' %}"><strong>For Netizens</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- ******************************NAVBAR***************************************************-->
+<!-- makes sure that the jumbotron does not get hidden behind fixed navbar-->
+
+<!-- ******************************CODING THAT IS PAGE SPECIFIC STARTS HERE************************** -->
+<br><br><br><br><br>
+<h1> #8 Insecure Deserialization
+ </h1>
+<div class="jumbotron white">
+    <p> Insecure deserialization also known as untrusted deserialization is a serious  vulnerability and a major contributor to application security issues potentially affecting most modern systems. Serialization refers to the act of converting objects to byte strings and the process of deserialization refers to the act of converting byte strings to objects. This interconversion is done to transport data between different nodes of a computer network as complex object type data is converted into a “flat” bitstream to be safely transported over the communication channel.
+Insecure deserialization is when user-controllable data is deserialized by a website. This allows the attacker to manipulate serialized objects in order to pass harmful data into the application code. It is even possible that the attacker may replace a serializable object. With an object of an entirely different class. Alarmingly, objects of any class that is available to the website will be deserialized and instantiated, regardless of which class was expected by the website. The instantiation of an unexpected class may throw an exception but this only happens after the input object has already been deserialized, instantiated and identified by the system and by the time this happens, it is already too late and the attacker has mostly always done what they originally intended to do.
+</p>
+</div>
+<div class="jumbotron lightblue">
+  <p>These vulnerabilities typically arise because of a lack of understanding as to how complicated and harmful these attacks can really be. Ideally speaking, user input should never be deserialized at all. However, sometimes website developers think that this attack may be mitigated because they implement additional checks on the deserialized data. As previously stated, this assumption is completely wrong and these checks are fundamentally flawed. This is because checking on data after deserialization is of no use as by that time, it will be too late to prevent the attack.
+The impact of insecure deserialization can be very grave as it provides an entry point to a massively increased attack surface. It allows hackers to use existing application code in harmful ways resulting in the generation of a host of other dangerous vulnerabilities.
+</p>
+</div>
+<div class="jumbotron aqua">
+
+  <p>The best way to prevent insecure deserialization is not to accept serialized objects from untrusted sources. Some other prevention techniques prescribed by OWASP include:
+
+Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes.
+Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
+Isolating and running code that deserializes in low privilege environments when possible.
+Logging deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
+Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
+Monitoring deserialization, alerting if a user deserializes constantly.
+</p>
+
+</div>
+
+<br>
+<div class="footer">
+  <p> Created By Harshita Chadha @2021</p>
+</div>
+  </body>
+</html>

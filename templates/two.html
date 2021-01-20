@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/top10.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owasp-homepage.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body class="p-3 mb-2 hello">
+<!-- ******************************NAVBAR***************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="resize" src="{% static 'css/logo.png' %}" alt=""></a>
+            <ul class="navbar navbar-nav navbar-brand">
+              <li> <h1> <span style="padding: 6px; border: 4px dotted #2EC4B6; background-color:#FFBF69">  CYBERNATION  </h1></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'owasp_homepage' %}"><strong>OWASP</strong></a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>The Top 10 Vulnerabilities</strong>
+              </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{% url 'one' %}">SQL Injection</a></li>
+      <li><a class="dropdown-item" href="{% url 'two' %}">Broken Authentication Vulnerability</a></li>
+      <li><a class="dropdown-item" href="{% url 'three' %}">Sensitive Data Exposure</a></li>
+      <li><a class="dropdown-item" href="{% url 'four' %}">XML External Entities (XXE)</a></li>
+      <li><a class="dropdown-item" href="{% url 'five' %}">Broken Access Control</a></li>
+      <li><a class="dropdown-item" href="{% url 'six' %}">Security Misconfigurations</a></li>
+      <li><a class="dropdown-item" href="{% url 'seven' %}">Cross-Site Scripting (XSS)</a></li>
+      <li><a class="dropdown-item" href="{% url 'eight' %}">Insecure Deserialization</a></li>
+      <li><a class="dropdown-item" href="{% url 'nine' %}">Using Components with Known Vulnerabilities</a></li>
+      <li><a class="dropdown-item" href="{% url 'ten' %}">Insufficient Logging and Monitoring</a></li>
+<!-- add the name sof the vulnerabilities to the drop down menu-->
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'netizens' %}"><strong>For Netizens</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- ******************************NAVBAR***************************************************-->
+<!-- makes sure that the jumbotron does not get hidden behind fixed navbar-->
+
+<!-- ******************************CODING THAT IS PAGE SPECIFIC STARTS HERE************************** -->
+<br><br><br><br><br>
+<h1> #2 Broken Authentication Vulnerability </h1>
+<div class="jumbotron white">
+    <p> If this vulnerability exists in a system, the attacker can gain control over select user accounts or even complete administrative control over the system using manual or automatic means. This term is used to indicate bugs and logical issues that occur in the application’s authentication mechanism. This weakness allows the attacker to either capture or bypass authentication methods that are used by a web application.
+
+Broken authentication is typically caused by poorly implemented authentication and sessions management functions. When this vulnerability is exploited, the hacker is given the same privileges as the attacked user. Authentication is said to be “broken” when attackers are able to compromise passwords, keys or session tokens, user account information, and other details to assume user identities.
+</p>
+</div>
+<div class="jumbotron lightblue">
+  <p>Some of the technique that can be used by the attacker under this category of attack are credential stuffing, brute force or automated attacks etc.
+
+In credential stuffing, credentials obtained via a major data breach on one server is used to log in to another unrelated service. Statistically speaking, this technique has a very low rate of success (a success rate of 1%. For every 100 data entries), however, the sheer volume of data available these days makes credential stuffing worth it. This can be prevented if at the user’s end unique passwords and IDs are used for separate services.
+
+In brute force attacks, trial and error is used to guess login details, encryption keys, or find a hidden web page. These attacks can either be manual or can be achieved by using automated tools which are essentially computer programs testing out millions of combinations of login credentials in a matter of seconds.
+Some of the common weak links that can be exploited to achieve broken authentication attack include predictable login credentials, exposure of session IDs in the URL, session values that do not get timed out or invalidate after logout, Permission of default, weak, or well-known passwords etc.
+</p>
+</div>
+<div class="jumbotron aqua">
+
+  <p>Some suggestions that can be used to prevent broken authentication are:
+
+  Implementing multi-factor authentication wherever possible.
+  No default credentials should be deployed for admin users.
+  Weak password checks should be implemented such as testing new or changed passwords against a list of the top 10000 worst passwords.
+  Hardening registration, credential recovery, and API pathways against account enumeration attacks by using same messages for all outcomes.
+  Limit or delay failed login attempts. All failures during the login process should be logged into the system so that the system administrator can be alerted when credential stuffing, brute force, or other attacks are detected.
+  A secure server-side sessions manager should be used so that a new random sessions ID may be issued to each user. These IDs should not be exposed in the URL and be securely stored and invalidates after logout, idle, and absolute timeouts.
+
+</p>
+
+</div>
+
+<br>
+<div class="footer">
+  <p> Created By Harshita Chadha @2021</p>
+</div>
+  </body>
+</html>

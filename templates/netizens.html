@@ -1,0 +1,141 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/top10.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owasp-homepage.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body class="p-3 mb-2 hello">
+<!-- ******************************NAVBAR***************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="resize" src="{% static 'css/logo.png' %}" alt=""></a>
+            <ul class="navbar navbar-nav navbar-brand">
+              <li> <h1> <span style="padding: 6px; border: 4px dotted #2EC4B6; background-color:#FFBF69">  CYBERNATION  </h1></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'owasp_homepage' %}"><strong>OWASP</strong></a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>The Top 10 Vulnerabilities</strong>
+              </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{% url 'one' %}">SQL Injection</a></li>
+      <li><a class="dropdown-item" href="{% url 'two' %}">Broken Authentication Vulnerability</a></li>
+      <li><a class="dropdown-item" href="{% url 'three' %}">Sensitive Data Exposure</a></li>
+      <li><a class="dropdown-item" href="{% url 'four' %}">XML External Entities (XXE)</a></li>
+      <li><a class="dropdown-item" href="{% url 'five' %}">Broken Access Control</a></li>
+      <li><a class="dropdown-item" href="{% url 'six' %}">Security Misconfigurations</a></li>
+      <li><a class="dropdown-item" href="{% url 'seven' %}">Cross-Site Scripting (XSS)</a></li>
+      <li><a class="dropdown-item" href="{% url 'eight' %}">Insecure Deserialization</a></li>
+      <li><a class="dropdown-item" href="{% url 'nine' %}">Using Components with Known Vulnerabilities</a></li>
+      <li><a class="dropdown-item" href="{% url 'ten' %}">Insufficient Logging and Monitoring</a></li>
+<!-- add the name sof the vulnerabilities to the drop down menu-->
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'netizens' %}"><strong>For Netizens</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- ******************************NAVBAR***************************************************-->
+<!-- makes sure that the jumbotron does not get hidden behind fixed navbar-->
+
+<!-- ******************************CODING THAT IS PAGE SPECIFIC STARTS HERE************************** -->
+<br><br><br><br><br>
+<h1> 10 tips for browsing safely </h1>
+<br>
+<div class="jumbotron white">
+  <br>
+  <h3>Keep your browser and any plugins updated</h3>
+    <p> Web browsers are often your first point of contact with the internet no matter what device you are using. Developers release frequent updates to ensure you can experience the latest the web has to offer – more than ever websites are taking advantage of all the new features enabled by HTML5 video and audio, advanced styling and improved speeds. Many sites have stopped supporting older versions browsers, due to compatibility and security concerns.</p>
+     <p>Hackers often target vulnerabilities in web browsers which is why the companies that make them release regular updates to patch any vulnerabilities. Installing the latest versions helps keep your device secure – fortunately, most common browsers include options to automatically update either in the browser themselves or as part of the operating system update tools.</p>
+</div>
+<div class="jumbotron lightblue">
+  <br>
+  <h3>Use a browser that allows you to take your bookmarks with you between devices</h3>
+  <p>Most modern browsers allow you to create an account so that you can reduce your reliance on search engines and synchronize your bookmarks between your laptop, tablet, and smartphone. Many even enable you to see the pages you have open in other devices and open them in the device you are using at the time.
+
+</p>
+</div>
+<div class="jumbotron aqua">
+  <br>
+  <h3>Block Pop-ups</h3>
+  <p>While desktop pop-ups from your operating system are unavoidable, pop-ups in your web browser can often be switched off. Browser pop-ups typically open new browser windows to push adverts, and while most are just annoying, some can contain malicious links or inappropriate content. Most browsers come with filters that automatically block pop-ups and enable you to allow them for those trusted sites where they may be advantageous.</p>
+
+</div>
+<div class="jumbotron lightblue">
+  <br>
+  <h3>Use an ad blocker</h3>
+  <p>Pop-up ads and the feeling of ads following you around the internet have led to the rise in popularity of the adblocker. Ad blockers stop webpages showing you ads, which sounds great until you realize how controversial this subject is and the profound impact it could have on the websites you visit.
+Most websites are paid for by ads on a pay per impression basis – so if you have an ad blocker running, you deny the publisher the revenues that are paying to keep the site going.
+By all means, protect yourself using an ad blocker, but do consider whitelisting your favorite sites as the ad revenue is what keeps them in business!  </p>
+</div>
+<div class="jumbotron white">
+  <br>
+  <h3>Enable “do not track” in your browser</h3>
+  <p> Many browsers include the ability to send a “do not track” request to websites which asks them not to collect or track your browsing data. However, what happens depends on how the sites respond to the request – but most websites and web servers don’t change their behavior and would appear to ignore the request. Still, making it clear you don’t wish to be tracked is a good start.
+</p>
+</div>
+<div class="jumbotron lightblue">
+  <br>
+  <h3>Clear your web browser cache and cookies</h3>
+  <p>Even if websites do decide to track your browsing data, you can limit the impact by regularly clearing your browser cache and deleting unwanted cookies. This prevents ads from following you around the web and can also ensure you have the latest version of a web page downloaded.
+
+All major browsers allow you to do this manually, and you can easily clear all your data, but there are also software options that automate the process to make your life easier. Whichever route you choose to go it may be worth considering whitelisting those sites that you regularly log in to avoid having to re-enter login details constantly.</p>
+</div>
+<div class="jumbotron aqua">
+  <br>
+  <h3>Turn on private browsing</h3>
+  <p>Private browsing protects your private information and blocks some websites from tracking your search and browsing data. It won’t hide your activity from your internet service provider, but it does reduce the accumulation of cookies and can be helpful if you are buying presents online for a significant other.</p>
+</div>
+<div class="jumbotron lightblue">
+  <br>
+  <h3>Use a VPN</h3>
+  <p>Virtual proxy networks or VPNs help you maintain your privacy by encrypting your data and internet requests before they ever hit the internet. The technology works the same no matter how you have connected to the internet – the encrypted data is sent to the VPN server which decrypts the requests before sending them on to the online destination. The information is then sent back through the same process meaning that sites, advertisers and internet service providers can’t track what you are doing.
+
+VPNs such as the one included in Panda Dome uses the most secure encryption protocols on the market to ensure the only person that can see your data is you.
+</p>
+
+</div>
+<div class="jumbotron white">
+  <br>
+  <h3>Use a password manager</h3>
+  <p> The number of password leaks that occur when websites are hacked makes it very dangerous to reuse the same password for a range of different sites. To prevent password leaks from being too damaging, you need to use unique passwords on every website. These should also be strong passwords – long, unpredictable passwords that contain numbers and symbols.
+
+However, remembering strong passwords for all those different passwords is almost impossible – that’s where a password manager comes in. They encrypt and securely store your login information for all the websites you used and help you log in automatically – leaving you to remember just the one master password.</p>
+</div>
+
+<div class="jumbotron lightblue">
+  <br>
+  <h3>Ensure you have up-to-date antivirus and firewall protection</h3>
+  <p>You need antivirus and firewall protection software on your computer no matter how carefully you browse the web or how smart you think you are about the links you click and the files you open.
+
+Threats can be hidden in even in the most reputable websites or files from the most trusted of sources and ensuring you are protected with a smart antivirus platform is well worth a small investment in time to ensure you are protected. The most reputable antivirus software solutions currently available, use big data and AI to monitor every running application and detect attacks before they happen.</p>
+
+</div>
+<br>
+<h5>Source: <a href="https://www.pandasecurity.com/en/mediacenter/mobile-news/tips-browsing-safer/"> pandassecurity</a></h5>
+<br>
+<div class="footer">
+  <br>
+  <p> Created By Harshita Chadha @2021</p>
+</div>
+</body>
+</html>
