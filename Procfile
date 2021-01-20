@@ -1,1 +1,1 @@
-web: gunicorn cybernation.wsgi:application --log-file -
+web: gunicorn projectname.wsgi
