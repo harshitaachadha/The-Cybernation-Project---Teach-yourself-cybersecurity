@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+body {
+    margin: 0;
+    background:#5da2d5;
+    color: white;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Prata';
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+h3 {
+    color: rgb(199,199,199);
+}
+
+p {
+    font-family: 'Poppins';
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+}
+.outer {
+    padding: 1em;
+}
+section {
+    column-count: 1;
+    column-gap: 2em;
+}
+
+img {
+    width: 80%;
+    margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        text-align: left;
+        font-size: 18px;
+    }
+    p {
+        line-height: 1.6em;
+    }
+    section {
+        column-count: 2;
+        column-rule-style: solid;
+        column-rule-color: rgb(43,43,43);
+    }
+    section > * {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: 0 0 1em;
+    }
+
+    .outer {
+        padding: 4em;
+    }
+
+    article {
+        padding: 2em;
+        background: #181818;
+    }
+
+    h2 {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+    
+    }
+
+    .secondary {
+        margin-top: 2em;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        color: rgb(199,199,199);
+        margin: 1.5em 0 1em;
+    }
+
+    p.span-all {
+        column-span: all;
+        font-size: 1.6em;
+        padding: .5em;
+        margin: 2em 0;
+        color: white;
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 1100px) {
+    .outer {
+        margin: 0 auto;
+        width: 80%;
+    }
+    section {
+        column-count: 3;
+    }
+}
+
+.container{
+    text-align: center;
+    margin-top:0px;
+    margin-bottom: 60px;
+   
+}
+
+button, button::after {
+    width: 380px;
+    height: 86px;
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+    
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+  }
+  
+  button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'AVAILABLE NOW';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+  }
+  
+  button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  .footer {
+    position: initial;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#1560BD;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+  
