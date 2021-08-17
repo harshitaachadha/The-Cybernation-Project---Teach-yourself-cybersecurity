@@ -1,0 +1,96 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/top10.css'%}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/bs.css' %}">
+<link rel="stylesheet" href="{% static 'css/owasp-homepage.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title></title>
+</head>
+<body class="p-3 mb-2 hello">
+
+  <!-- ******************************NAVBAR***************************************************-->
+  <!-- ******************************NAVBAR***************************************************-->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="resize" src="{% static 'css/logo.png' %}" alt=""></a>
+          <ul class="navbar navbar-nav navbar-brand">
+            <li> <h1> <span style="padding: 6px; border: 4px dotted #2EC4B6; background-color:#FFBF69">  CYBERNATION  </h1></li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'owasp_homepage' %}"><strong>OWASP</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'one' %}"><strong>Back to Injection</strong></a>
+        </li>
+
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'netizens' %}"><strong>For Netizens</strong></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- ******************************NAVBAR***************************************************-->
+  <!-- makes sure that the jumbotron does not get hidden behind fixed navbar-->
+
+  <!-- ******************************CODING THAT IS PAGE SPECIFIC STARTS HERE************************** -->
+  <br><br><br><br><br>
+    <center> <h1>  Login Form </h1> </center>
+    <br>
+    <div class="jumbotron white">
+      <form>
+          <div class="container">
+            <center> <label>Username : </label>
+              <input type="text" placeholder="Enter Username" name="username" >
+            </center>
+            <center>
+              <label>Password : </label>
+              <input type="password" placeholder="Enter Password" name="password" >
+            </center>
+            <center>
+              <button type="submit" class="btn mustard">Login</button>
+            </center>
+          </div>
+      </form>
+    </div>
+
+    <div class="jumbotron lightblue">
+      <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th> Salary </th>
+          <th> User Name </th>
+          <th> password </th>
+        <tr>
+      </thead>
+      <tbody>
+      {% for item in ans %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.position }}</td>
+          <td>{{ item.sal }}</td>
+          <td>{{ item.user_name }}</td>
+          <td>{{ item.password }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

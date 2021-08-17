@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/design.css">
+  
+
+    <title>Insecure Deserialization</title>
+</head>
+<body>
+    <div class="outer">
+        <h1>#8 Insecure Deserialization</h1>
+        <article>
+            <h2>Insecure Deserialization</h2>
+            <section>
+                <p>Insecure deserialization also known as untrusted deserialization is a serious vulnerability and a major contributor to application security issues potentially affecting most modern systems. Serialization refers to the act of converting objects to byte strings and the process of deserialization refers to the act of converting byte strings to objects. This interconversion is done to transport data between different nodes of a computer network as complex object type data is converted into a “flat” bitstream to be safely transported over the communication channel. Insecure deserialization is when user-controllable data is deserialized by a website. This allows the attacker to manipulate serialized objects in order to pass harmful data into the application code. It is even possible that the attacker may replace a serializable object. With an object of an entirely different class. Alarmingly, objects of any class that is available to the website will be deserialized and instantiated, regardless of which class was expected by the website. The instantiation of an unexpected class may throw an exception but this only happens after the input object has already been deserialized, instantiated and identified by the system and by the time this happens, it is already too late and the attacker has mostly always done what they originally intended to do.</p> 
+
+                <p>These vulnerabilities typically arise because of a lack of understanding as to how complicated and harmful these attacks can really be. Ideally speaking, user input should never be deserialized at all. However, sometimes website developers think that this attack may be mitigated because they implement additional checks on the deserialized data. As previously stated, this assumption is completely wrong and these checks are fundamentally flawed. This is because checking on data after deserialization is of no use as by that time, it will be too late to prevent the attack. The impact of insecure deserialization can be very grave as it provides an entry point to a massively increased attack surface. It allows hackers to use existing application code in harmful ways resulting in the generation of a host of other dangerous vulnerabilities.</p>
+                <img src="assets/img/cyber-security-vector.png" alt="Computer keyboard">
+
+                <h3></h3>
+                <img src="assets/img/insecure_object_deserialization-a1b4075de31819d6304aadf8d1519c7a3759ed54658cd34cf23747fd1aef7bad.png" alt="Computer keyboard">
+
+                <p>The best way to prevent insecure deserialization is not to accept serialized objects from untrusted sources. Some other prevention techniques prescribed by OWASP include: Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable. Isolating and running code that deserializes in low privilege environments when possible. Logging deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions. Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize. Monitoring deserialization, alerting if a user deserializes constantly.</p>
+                
+                <p>
+                    </p>
+            </section>
+
+            
+            
+        </article>
+    </div>
+    <div class="container">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        
+       <a href="login.html"><button >Get Hacking !</button></a> 
+    </div>
+    <footer class="footer">
+       <div class="footer">
+           <p>&#169; Created by Edit 10 and Meraki Lab - 2021. All rights reserved.</p>
+       </div>
+      </footer>
+</body>
+</html>

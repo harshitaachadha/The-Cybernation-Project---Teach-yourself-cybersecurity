@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/design.css">
+  
+
+    <title>XML External Entities (XXE)</title>
+</head>
+<body>
+    <div class="outer">
+        <h1>#4 XML External Entities (XXE) </h1>
+        <article>
+            <h2>XML External Entities (XXE)</h2>
+            <section>
+                <p>An XML External Entities attack or XXE attack for short is a type of attack that is done against those web applications that parse XML input. This attack occurs when XML input containing a reference to an external entity is processed by a weakly configured XML parser. XML, that stands for extensible mark-up language, is a data format similar to HTML. The main difference between the two is that HTML is used primarily for data representation whereas XML is used for transportation and storage of data. XML documents are human readable and are used in a wide variety of web applications such as APIs, UI layouts and styles etc.</p> 
+                <img src="assets/img/XXE.png" alt="Computer keyboard">
+
+                <h3></h3>
+
+                <p>Entities in an XML document are like variables that store a user specified value, pull value from a remote file, and can even be used to fetch remote data over the network and store this data as an entity for later use. External entities are a sub class of entities in an XML document and these are the primary objects which are used to cause the XXE attacks. External entities are used to fetch external resources and store these inside the file entity (The SYSTEM keyword is used to do so). These when executed in a parser can be used to access sensitive data, local files and URLs and cause the XXE vulnerability. Most XML parsers are vulnerable to XXE attacks by default and XXE can occur in deeply nested dependencies. That is why the responsibility of ensuring that the application does not have this vulnerability lies mostly on the developer. According to OWASP, the easiest way to exploit an XXE is to upload a malicious XML file.</p>
+                <img src="assets/img/AdobeStock_78212150.jpeg" alt="Computer keyboard">
+
+                <p>Through an XML External Entity attack, the attacker may attempt to: extract sensitive data from the server, probe the server’s private network, attempt a denial of service attack by including a potentially endless file, cause server side request forgery etc. Some suggestions to prevent this attack are listed below: Forgoing XML format and using less complex formats such as JSON whenever possible to avoid serialization of sensitive data. Patching or upgrading all XML processors and libraries in use by the application or the underlying operating system. Disabling XML external entity and DTD processing in all XML parsers. SAST tools may also be used to help detect XXE in source code. Moreover, virtual patching, API security gateways, and we application firewalls (WAFs) may alco be used to detect and block XXE attacks.
+                    </p>
+            </section>
+
+            
+            
+        </article>
+    </div>
+    <div class="container">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        
+       <a href="login.html"><button >Get Hacking !</button></a> 
+    </div>
+    <footer class="footer">
+       <div class="footer">
+           <p>&#169; Created by Edit 10 and Meraki Lab - 2021. All rights reserved.</p>
+       </div>
+      </footer>
+</body>
+</html>
