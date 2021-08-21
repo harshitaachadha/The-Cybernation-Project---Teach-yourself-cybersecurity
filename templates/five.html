@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{%static 'assets/css/swiper-bundle.min.css' %}">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="{%static 'assets/css/design.css' %}">
   
 
     <title>Broken Access Control</title>
@@ -24,7 +24,7 @@
                 <p>In cyber security, Access control means to put a limit to what areas a particular user or visitor can access depending upon their needs and levels. Access control enforces policies such that users of the application cannot act outside of their intended permissions. Failure to implement these access controls causes the broken access control vulnerability and lead to unauthorized information disclosure, modification or destruction of all data, or performing business function outside of the limits of the user. In the context of web applications, access control is dependent on authentication and session management. Authentication identifies the user and confirms that they are who they say they are. Sessions management on the other hand identifies which subsequent HTTP requests are being made by that same user. And as an umbrella term for the above two concepts, access control determines whether the user is allowed to carry out the action they are attempting to perform.</p> 
 
                 
-                <img src="assets/img/broken-access-control-vulnerabilities-key-cyber-security-problems-1536x1024.jpeg" alt="Computer keyboard">
+                <img src="{%static 'assets/img/broken-access-control-vulnerabilities-key-cyber-security-problems-1536x1024.jpeg' %}" alt="Computer keyboard">
 
                 <h3></h3>
 
@@ -33,7 +33,7 @@
 
                 <p>According to the OWASP official documentation, the attackers can exploit authorization flows by accessing unauthorized functionalities or data, viewing sensitive files, modifying other users’ data, changing access rights etc. Some of the suggestions to eradicate and minimize broken authentication vulnerabilities are: The least privilege concept should be applied to the web applications. That is application of a role appropriate the current task should exist and nothing more. The accounts that are no longer needed or are no longer in use should be deleted and servers and websites should be audited. Multi-factor authentication should be applied to all the access points of the web application and the access points should remain disabled until needed in order to reduce access windows. Moreover, unnecessary services should be removed from the server. Externally accessible applications should always be verified. Model access controls should be enforced and the application should be designed to incorporate more stringent record ownership. Unique application business limit requirements should be enforced by domain models.
                     </p>
-                    <img src="assets/img/broken-access-control.png" alt="Computer keyboard">
+                    <img src="{%static 'assets/img/broken-access-control.png' %}" alt="Computer keyboard">
             </section>
 
         
@@ -44,7 +44,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
-       <a href="login.html"><button >Get Hacking !</button></a> 
+       <a href="{%url 'login' %}"><button >Get Hacking !</button></a> 
     </div>
     <footer class="footer">
        <div class="footer">
