@@ -26,7 +26,7 @@ SECRET_KEY = 'nm5uabd(rq_#7q84(ecjslry0j_*c+e5fjz1g)=op(!6$kehmb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cybernation.herokuapp.com',]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
