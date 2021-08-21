@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{%static 'assets/css/swiper-bundle.min.css' %}">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="{%static 'assets/css/design.css' %}">
   
 
     <title>Using Components with Known Vulnerabilities</title>
@@ -24,10 +24,10 @@
                 <p>This category of threats are applicable to all those websites that have a lot of dependencies or have legacy module dependant structure which may cause hinderance to regular updating cycles. Failing to update your system dependencies may result in the web application running outdated modules with less stringent security provisions thereby making them easier targets for malicious attacks. There are many reasons why an organization may be unable to update their application dependencies as and when they roll out. Two of the most common ones are: (1) Web masters and developers cannot keep up with the pace of updates as updating properly does take a lot of time and (2) Legacy code does not work on newer versions of its dependencies. Whatever may be the reason for not having up to date modules, this decision allows unknown vulnerabilities to persist in the system which may be manipulated by cyber criminals to launch attacks.</p> 
 
                 <p>In cases where it is not possible to run the most up to date software dependencies, OWASP recommends using virtual patching for the cases where patching up is not possible. This technique allows outdated websites to be protected from attacks by using firewalls and intrusion detection systems.</p>
-                <img src="assets/img/cyber-security-vector (1).png" alt="Computer keyboard">
+                <img src="{%static 'assets/img/cyber-security-vector (1).png' %}" alt="Computer keyboard">
 
                 <h3></h3>
-                <img src="assets/img/pict--lock-properties-cybersecurity-vector-stencils-library.png" alt="Computer keyboard">
+                <img src="{%static 'assets/img/pict--lock-properties-cybersecurity-vector-stencils-library.png' %}" alt="Computer keyboard">
                 <p>According to OWASP, some of the ways to prevent suing components with known vulnerabilities are: Remove all unnecessary dependencies. Have an inventory of all your components on the client-side and server-side. Monitor sources like Common Vulnerabilities and Disclosures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components. Obtain components only from official sources. Get rid of components not actively maintained and use virtual patching.</p>
                 
 
@@ -42,7 +42,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
-       <a href="login.html"><button >Get Hacking !</button></a> 
+       <a href="{%url 'login' %}"><button >Get Hacking !</button></a> 
     </div>
     <footer class="footer">
        <div class="footer">
