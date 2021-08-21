@@ -44,6 +44,9 @@ def ten(request):
 def netizens(request):
     return render(request,'netizens.html')
 
+def netizens(request):
+    return render(request,'login.html')
+
 def form(request):
     un = request.GET.get('username')
     pwd = request.GET.get('password')
