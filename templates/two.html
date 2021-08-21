@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{%static 'assets/css/swiper-bundle.min.css' %}">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="{%static 'assets/css/design.css' %}">
   
 
     <title>Broken Authentication Vulnerability</title>
@@ -22,12 +22,12 @@
             <h2>Broken Authentication Vulnerability</h2>
             <section>
                 <p>If this vulnerability exists in a system, the attacker can gain control over select user accounts or even complete administrative control over the system using manual or automatic means. This term is used to indicate bugs and logical issues that occur in the application’s authentication mechanism. This weakness allows the attacker to either capture or bypass authentication methods that are used by a web application. Broken authentication is typically caused by poorly implemented authentication and sessions management functions. When this vulnerability is exploited, the hacker is given the same privileges as the attacked user. Authentication is said to be “broken” when attackers are able to compromise passwords, keys or session tokens, user account information, and other details to assume user identities.</p> 
-                <img src="assets/img/code_injection_header.jpg" alt="Computer keyboard">
+                <img src="{%static 'assets/img/code_injection_header.jpg' %}" alt="Computer keyboard">
                 <p>Some of the technique that can be used by the attacker under this category of attack are credential stuffing, brute force or automated attacks etc. In credential stuffing, credentials obtained via a major data breach on one server is used to log in to another unrelated service. Statistically speaking, this technique has a very low rate of success (a success rate of 1%. For every 100 data entries), however, the sheer volume of data available these days makes credential stuffing worth it. This can be prevented if at the user’s end unique passwords and IDs are used for separate services. In brute force attacks, trial and error is used to guess login details, encryption keys, or find a hidden web page. These attacks can either be manual or can be achieved by using automated tools which are essentially computer programs testing out millions of combinations of login credentials in a matter of seconds. Some of the common weak links that can be exploited to achieve broken authentication attack include predictable login credentials, exposure of session IDs in the URL, session values that do not get timed out or invalidate after logout, Permission of default, weak, or well-known passwords etc.</p>
              
 
                 <h3></h3>
-                <img src="assets/img/Broken authentication.png" alt="Computer keyboard">
+                <img src="{%static 'assets/img/Broken authentication.png' %}" alt="Computer keyboard">
                 <p>Some suggestions that can be used to prevent broken authentication are: Implementing multi-factor authentication wherever possible. No default credentials should be deployed for admin users. Weak password checks should be implemented such as testing new or changed passwords against a list of the top 10000 worst passwords. Hardening registration, credential recovery, and API pathways against account enumeration attacks by using same messages for all outcomes. Limit or delay failed login attempts. All failures during the login process should be logged into the system so that the system administrator can be alerted when credential stuffing, brute force, or other attacks are detected. A secure server-side sessions manager should be used so that a new random sessions ID may be issued to each user. These IDs should not be exposed in the URL and be securely stored and invalidates after logout, idle, and absolute timeouts.</p>
                 
 
@@ -41,7 +41,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
-       <a href="login.html"><button >Get Hacking !</button></a> 
+       <a href="{%url 'login' %}"><button >Get Hacking !</button></a> 
     </div>
     <footer class="footer">
        <div class="footer">
