@@ -32,5 +32,7 @@ urlpatterns = [
     path('ten', views.ten, name='ten'),
     path('form', views.form, name='form'),
     path('netizens', views.netizens, name='netizens'),
+    path('login', views.login, name='login'),
+    
 
 ]
