@@ -44,7 +44,7 @@ def ten(request):
 def netizens(request):
     return render(request,'netizens.html')
 
-def netizens(request):
+def login(request):
     return render(request,'login.html')
 
 def form(request):
