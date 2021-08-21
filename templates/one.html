@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{%static 'assets/css/swiper-bundle.min.css' %}">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="{%static 'assets/css/design.css' %}">
   
 
     <title>Injection</title>
@@ -33,12 +33,12 @@
                  is not validated or sanitized.</p> 
 
                 <p>This is arguably one of the most commonly used web application attack techniques. All those website operations that accept parameters as inputs are vulnerable to the SQL injection attack. The database query that is to be sent by the application to the remote or cloud-based database is carefully manipulated and recrafted into a malicious statement. To understand how this technique is used to launch attacks on web applications it is important to understand that whenever any information is fetched or entered into the system, a SQL query is generated. During the injection attack, it is this generated query that is tampered with. It is also important to understand that changes can only be made to the input that is given to the application and not the underlying query itself as the hacker does not, in this case, has access to the website’s source code. When the query evaluates to true, the data is suitably fetched and displayed. If it evaluates to false, an error is thrown. </p>
-                <img src="assets/img/sql-injection-wordpress-brisbane.jpg" alt="Computer keyboard">
+                <img src="{%static 'assets/img/sql-injection-wordpress-brisbane.jpg' %}" alt="Computer keyboard">
 
                 <h3></h3>
 
                 <p>The input is manipulated in a manner so that the resultant query is altered, and the malicious query thus generated can fetch the desired results to the hacker. One of the most commonly used techniques in this case is the usage of the OR logic gate function. This function and the effect it has on the query is illustrated in the figure below:</p>
-                <img src="assets/img/1_zB5JlbMSA26pklzNRAmSEg.png" alt="Computer keyboard">
+                <img src="{%static 'assets/img/1_zB5JlbMSA26pklzNRAmSEg.png' %}" alt="Computer keyboard">
 
                 <p>In the example in the above illustration, the web application prompts the user to enter the username and password. If the username entered and the corresponding password are found in the database by the generated query, it evaluates to true and the data is fetched. Otherwise an error is thrown. When the OR logic function is used along with the condition 1=1, the query always evaluates to true since, 1=1 is always true. Moreover, the double dashes and quotation mark at the end of the malicious statement comment out the rest of the query thereby making the password matching obsolete for that cycle. Thus, in this case, a true flag is generated as the result of the query and the data is returned by database and displayed without the proper credentials making the hack successful. The injection technique is most commonly used to control application behavior based on the data in the database, for instance tricking an application into allowing a login without a valid password. This attack may also be used to alter data in the database without authorization, for example by creating fraudulent records and adding users or promoting existing users to higher access levels. This may also be used to delete data from the database. Another application is in accessing data without authorization, for instance by tricking the database into providing too many results for a given query.
                     </p>
@@ -49,7 +49,7 @@
             <section>
 
                 <p>Some of the suggestions that can be given to developers to prevent SQL injection attacks are: Escaping all user supplied input: This helps to circumvent inputs where the user enters specific characters or words that may be malicious in nature and have risks associated with the. Escaping a character tells the database not to parse it as a command but instead to treat is as a literal input. Enforcing least privilege: Herein, the exposure to injection vulnerability is reduced by limiting permissions to the narrowest scope required to execute the relevant query. In other words, this means that an administrative account should not be allowed to execute SQL commands as a result of an API call from an unauthorized request..</p> 
-                <img src="assets/img/sql-injection.gif" alt="Computer keyboard">
+                <img src="{%static 'assets/img/sql-injection.gif' %}" alt="Computer keyboard">
                 <p>Cybernation Project comes with a utility page that helps simulate for the user a SQL injection susceptible environment. Clicking on the button below, redirects the user to a login page where the correct credentials are added to log in. A combination of malacious code however may also be used to achieve this. The solutions to the challenge are not publically available as it is meant to be a challenge. Have fun hacking! </p>
             </section>
             
@@ -59,7 +59,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
-       <a href="login.html"><button >Get Hacking !</button></a> 
+       <a href="{%url 'login' %}"><button >Get Hacking !</button></a> 
     </div>
     <footer class="footer">
        <div class="footer">
